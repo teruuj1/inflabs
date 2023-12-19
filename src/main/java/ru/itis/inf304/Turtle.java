@@ -8,22 +8,22 @@ public class Turtle extends Creature {
 
         switch (direction) {
             case 0:
-                if (currPosition.getRow() == 0 && currPosition.getColumn() == 0) break;
+                if (currPosition.getRow() <= 0 && currPosition.getColumn() <= 0) break;
                 currPosition.setRow(currPosition.getRow()-1);
                 currPosition.setColumn(currPosition.getColumn()-1); break;
             case 1:
-                if (currPosition.getColumn() == 1000) break;
+                if (currPosition.getColumn() >= 1000) break;
                 currPosition.setColumn(currPosition.getColumn()+1); break;
             case 2:
-                if (currPosition.getRow() == 1000 && currPosition.getColumn() == 0) break;
+                if (currPosition.getRow() >= 1000 && currPosition.getColumn() <= 0) break;
                 currPosition.setRow(currPosition.getRow()-1);
                 currPosition.setColumn(currPosition.getColumn()+1); break;
             case 3:
-                if (currPosition.getRow() == 0 && currPosition.getColumn() == 1000) break;
+                if (currPosition.getRow() <= 0 && currPosition.getColumn() >= 1000) break;
                 currPosition.setRow(currPosition.getRow()+1);
                 currPosition.setColumn(currPosition.getColumn()-1); break;
             case 4:
-                if (currPosition.getRow() == 1000 && currPosition.getColumn() == 1000) break;
+                if (currPosition.getRow() >= 1000 && currPosition.getColumn() >= 1000) break;
                 currPosition.setRow(currPosition.getRow()+1);
                 currPosition.setColumn(currPosition.getColumn()+1); break;
         }
